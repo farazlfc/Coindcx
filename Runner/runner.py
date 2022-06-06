@@ -42,7 +42,7 @@ class Runner:
 			self._error_logger.error(f"DataGenerationError : {e}")
 			return False
 
-		ltp = self._dg.get_ltp()
+		ltp = self._dg.get_ltp() #get most recent data for the symbol
 		try:
 			self._sig.generate_signal(self._dg._data, self._signal_mode, float(ltp['last_price']), self._signal_stats)
 		except Exception as e:

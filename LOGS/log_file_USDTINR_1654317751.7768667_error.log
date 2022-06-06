@@ -1,0 +1,2 @@
+10:12:33 :: SupportingObjectCreationError : unsupported operand type(s) for *: 'NoneType' and 'int'
+10:12:33 :: InitialisationFailedException : SupportingObjectCreationException

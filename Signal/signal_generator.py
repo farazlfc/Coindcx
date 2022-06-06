@@ -11,11 +11,13 @@ from Common.utils import Utils
 from Symbol.symbol_generator import SymbolGenerator
 
 from Data.data_generator import DataGenerator
+from Indicators.custom import  Custom
 
 from Indicators.macd import MACD
 from Indicators.bollinger import BollingerBands
 from Indicators.super_trend import SuperTrend 
 from Indicators.ema import EMA
+from Indicators.custom import Custom
 
 class SignalGenerator:
 	def __init__(self):
@@ -26,6 +28,17 @@ class SignalGenerator:
 
 	def generate_signal(self, data, mode, price, signal_stats):
 		#Use the Indicator class and get variable objects
+		if mode == 'CUSTOM':
+			try:
+				signals = Custom.get_custom(data, 3)
+				if price <= signals["threshold"]:
+					self._current_signal = -1 #buy
+				elif price >= signals["threshold"]:
+					self._current_signal = 1 #sell
+				else:
+					self._current_signal = 0
+			except:
+				pass
 		if mode == 'BOLLINGER':
 			try:
 				signals = BollingerBands.get_bollinger_bands(data, signal_stats['w'], signal_stats['sd'])

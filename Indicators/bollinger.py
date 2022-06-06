@@ -18,8 +18,8 @@ class BollingerBands:
 		bollinger_high = ma + (msd * sd)
 		bollinger_low = ma - (msd * sd)
 
-		bollinger_high = list(bollinger_high.dropna().values)
-		bollinger_low = list(bollinger_low.dropna().values)
+		bollinger_high = list(bollinger_high.dropna().values) #all na values are at the start?
+		bollinger_low = list(bollinger_low.dropna().values) #""
 
 		l = len(bollinger_high)
 		for i in range(len(arr) - l):

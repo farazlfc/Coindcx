@@ -1,7 +1,7 @@
 {
-	"symbol" : "MATICUSDT", 
+	"symbol" : "USDTINR",
 	"resource_percent" : 50,
-	"base_log_path" : "D:/CryptoBot/LOGS",
+	"base_log_path" : "./LOGS",
 	"granularity" : "5m",
 	"limit" : 200,
 	"signal_mode" : "MACD",
@@ -14,5 +14,5 @@
 	"target" : 10,
 	"stop" : 10,
 	"trail" : 10,
-	"run_interval" : 60
+	"run_interval" : 3600
 }

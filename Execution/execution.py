@@ -52,8 +52,8 @@ class Execution:
 	def update_current_inventroy(self):
 		return self.get_current_resource(self._symbol._symbol_details['target_currency_short_name'])
 
-	def get_current_resource(self, coin):
-		timestamp = Utils.get_timestamp()
+	def get_current_resource(self, coin): #get balance of the mentioned resource
+		timestamp = Utils.get_timestamp() #time in ms?
 		body = {
 			"timestamp" : timestamp
 		}

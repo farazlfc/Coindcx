@@ -5,10 +5,13 @@ import json
 import time
 import sys
 
-config_path = "D:/CryptoBot/trade_config.json"
+config_path = "trade_config.json"
 
 with open(config_path) as f:
 	cfg = json.loads(f.read())
+
+print(cfg)
+
 
 symbol_name = cfg["symbol"]																			#Target instrument to trade on
 resource_percent = cfg["resource_percent"]															#% of resources to be exposed per trade
@@ -59,4 +62,3 @@ except KeyboardInterrupt:
 	rn.end_run()
 	error_logger.info(f"PNL : {rn._exec._current_net_pnl} | ROUND TRIPS : {rn._exec._round_trips}")
 	sys.exit(1)
-		
