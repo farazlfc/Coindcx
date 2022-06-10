@@ -1,0 +1,4 @@
+10:59:23 :: {'side': 'buy', 'timestamp': 1654752563082, 'id': 0, 'fee_amount': 1.9995096, 'avg_entry': 81.88, 'turnover': 1999.5096, 'quantity': 24.42, 'status': 'open'}
+11:13:22 :: {'side': 'sell', 'timestamp': 1654753402676, 'id': 0, 'fee_amount': 1.9968234, 'avg_entry': 81.77, 'turnover': 1996.8234, 'quantity': 24.42, 'status': 'open'}
+11:13:22 :: RUN COMPLETE!
+11:13:22 :: PNL : -4.683023399999986 | ROUND TRIPS : 0
